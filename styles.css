@@ -1,0 +1,188 @@
+/* =========================================
+   VARIABLES GLOBALES
+   =========================================
+   Los mismos colores y tipografías que uso en mi diario.
+   Papel viejo, tinta suave, el azul que destaca.
+   Así este proyecto se siente como parte de lo mismo.
+========================================= */
+:root {
+  --paper: #faf7f2;
+  --paper-d: #e8e3dc;
+  --ink: #1a1a1a;
+  --ink-soft: #444;
+  --accent: #0056d2;
+  --accent-soft: #dce8ff;
+  --mono: "Space Mono", monospace;
+  --serif: "Libre Baskerville", serif;
+  --display: "Playfair Display", serif;
+  --sans: "DM Sans", sans-serif;
+
+  --radius: 6px;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+  --speed: 0.25s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p, li {
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+
+code {
+  font-family: var(--mono);
+  background: var(--paper-d);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   NAVBAR FIJA A LA IZQUIERDA
+ ========================================= */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: var(--paper);
+  border-right: 1px solid var(--paper-d);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+#navbar header {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--paper-d);
+  padding-bottom: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--paper-d);
+  font-family: var(--sans);
+  transition: color var(--speed), padding var(--speed);
+}
+
+.nav-link:hover {
+  color: var(--accent);
+  padding-left: 0.5rem;
+}
+
+/* El contenido principal se desplaza para dejar sitio a la navbar */
+#main-doc {
+  margin-left: 280px;
+  padding: 2rem 3rem;
+  max-width: 900px;
+}
+
+/* =========================================
+   SECCIONES
+ ========================================= */
+.main-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 1rem;
+}
+
+.main-section header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #3e2c1b;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+  font-family: var(--display);
+}
+
+.main-section p {
+  margin-bottom: 1rem;
+}
+
+/* Código: fondo oscuro para que resalte, como en mi diario */
+pre, code:not(:is(pre code)) {
+  background: #1a1a1a;
+  color: #f5f5f5;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  margin: 1rem 0;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  display: block;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+:not(pre) > code {
+  background: var(--paper-d);
+  color: var(--ink);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+ul {
+  margin: 1rem 0 1rem 2rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+/* =========================================
+   RESPONSIVE
+  ========================================= */
+@media (max-width: 768px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--paper-d);
+    padding: 1rem;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  .nav-link {
+    display: inline-block;
+    margin-right: 1rem;
+    border-bottom: none;
+  }
+}
