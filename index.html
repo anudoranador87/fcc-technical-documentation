@@ -2,93 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Technical Documentation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation — Jose Aparicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&family=Space+Mono&family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
-<nav id="navbar">
-  <header>Jose Aparicio · Dev Log 365</header>
-  <a class="nav-link" href="#Filosofía_del_aprendizaje">Filosofía del aprendizaje</a>
-  <a class="nav-link" href="#Dev_Log_365">Dev Log 365</a>
-  <a class="nav-link" href="#Stack_técnico_y_progreso">Stack técnico y progreso</a>
-  <a class="nav-link" href="#EquiShift_Málaga">EquiShift Málaga</a>
-  <a class="nav-link" href="#Herramientas_y_método">Herramientas y método</a>
-</nav>
-
-<main id="main-doc">
-  <section class="main-section" id="Filosofía_del_aprendizaje">
-    <header>Filosofía del aprendizaje</header>
-    <p>Empecé el 20 de febrero de 2026, a los 39 años, sin bootcamp ni carrera de informática. Mi única certeza: la consistencia vale más que el talento. Cada día avanzo paso a paso, con una hora por la mañana antes del trabajo. Mi lema es <em>"Logic is my superpower. Syntax is just the tool"</em>.</p>
-    <p>Para mí, aprender de verdad no es saber algo de memoria. Es entenderlo. Cuando algo no me queda claro, me lío. Y cuando me lío, lo desgloso paso a paso hasta que mi mente hace clic. Documento cada error, no solo el fix. Así construyo memoria real.</p>
-    <p>Mi símbolo es el Fénix: si me caigo, resurjo de mis cenizas. Mi frase: <em>"Eso que no me mata, me hace más fuerte"</em>. Por eso llevo un diario público: para que quede constancia de que esto está pasando de verdad, con días buenos y días en blanco.</p>
-    <code>// Mi mental model cuando algo no funciona<br>if (algo_no_entiendo) {<br>  desglosar_paso_a_paso();<br>  documentar_error();<br>  no_rendirse();<br>}</code>
-    <ul>
-      <li>Consistencia sobre talento</li>
-      <li>Documentar cada error, no solo el fix</li>
-      <li>Entender antes de avanzar</li>
-      <li>Las personas primero: el código resuelve problemas reales</li>
-    </ul>
-  </section>
-
-  <section class="main-section" id="Dev_Log_365">
-    <header>Dev Log 365</header>
-    <p>El Dev Log 365 es mi diario público de aprendizaje. Arrancó el 20 de febrero de 2026 y ya llevo 26 sesiones documentadas. Cada entrada es un testigo de que estoy aquí todos los días, construyéndome. Sin filtros: errores incluidos, días malos incluidos, dudas incluidas.</p>
-    <p>Cada entrada tiene tres capas. La técnica: el error con causa, síntoma y fix. La empatía: quién hay detrás de lo que construyo. No un algoritmo. La vulnerabilidad honesta: cómo me sentí. <em>"Menuda guerra me está dando"</em>, <em>"me quedo en blanco"</em>, <em>"esto no ha podido conmigo"</em>.</p>
-    <p>El formato sigue STAR (Situación, Tarea, Acción, Resultado), debug log, victorias, código del día, mental model y next target. Así cada sesión deja una huella clara. Algunos hitos recientes: el motor de EquiShift validando 104 fines de semana, MiniShop JS con 6 bugs documentados, y el día que entendí arrow functions después de 5 intentos fallidos.</p>
-    <code>&lt;article class="entry"&gt;<br>  &lt;h2&gt;TruncateString me tuvo seis intentos&lt;/h2&gt;<br>  &lt;p&gt;Menuda guerra me estuvo dando...&lt;/p&gt;<br>&lt;/article&gt;</code>
-    <ul>
-      <li>STAR (Situación, Tarea, Acción, Resultado)</li>
-      <li>Debug Log con bugs y fixes</li>
-      <li>Mental model del día</li>
-      <li>Next target: lo que sigue y lo que evito</li>
-    </ul>
-  </section>
-
-  <section class="main-section" id="Stack_técnico_y_progreso">
-    <header>Stack técnico y progreso</header>
-    <p>Mi stack base: HTML5, CSS3 y JavaScript. Niveles honestos: Flexbox 90%, Responsive Design 80%, CSS & Grid 70%, JavaScript 60%, OOP/Clases 60%, Algoritmos 50%. Prefiero decir la verdad siempre.</p>
-    <p>Certificaciones oficiales: Meta Programming with JavaScript (Coursera, marzo 2026), freeCodeCamp Responsive Web Design, freeCodeCamp JavaScript Algorithms. Actualmente curso el Meta Front-End Developer Professional Certificate.</p>
-    <p>Proyectos que avalan mi aprendizaje: Campus & Crema (cafetería universitaria con Flexbox y responsive), Mangata & Gallo (microinteracciones y tipografía), We Playing Cards (lógica de cartas con máquina de estados), MiniShop JS (POO con clases, reduce y filter), y EquiShift Málaga (algoritmo de rotación real).</p>
-    <code>function esTurnoLegal(turnoAyer, turnoHoy) {<br>  if (turnoAyer === "descanso") return true;<br>  if (turnoAyer === "tarde" && turnoHoy === "mañana") return false;<br>  if (turnoAyer === "noche" && (turnoHoy === "mañana" || turnoHoy === "tarde")) return false;<br>  return true;<br>}</code>
-    <ul>
-      <li>HTML5: ✅ dominado</li>
-      <li>CSS3: ✅ dominado (Flex, Grid, responsive)</li>
-      <li>JavaScript: ██████░░░░ 60%</li>
-      <li>OOP / Clases: ██████░░░░ 60%</li>
-      <li>Algoritmos: █████░░░░░ 50%</li>
-    </ul>
-  </section>
-
-  <section class="main-section" id="EquiShift_Málaga">
-    <header>EquiShift Málaga</header>
-    <p>EquiShift no es un proyecto de portfolio. Es una deuda pendiente. Diego descansó el 70% de los fines de semana disponibles un año. los otros 4, el 30 por ciento restante.</p>
-    <p>El sistema intentara resolver la rotación de turnos para plantilla de hotel: 5 trabajadores, 3 turnos diarios (mañana, tarde, noche) más descanso, con mínimo 16 horas de descanso entre turnos. El algoritmo es modular y garantiza equidad matemática. Soporta contratos mixtos (37.5h y 40h) con saldo individual, y ya valida los 104 fines de semana de 2026 con un dataset completo de festivos de Málaga.</p>
-    <p>Cuando funcione con datos reales en el hotel, con Diego, Salvador, Miguel y Rafa, ese será el momento que hará que todo valga la pena. Mientras tanto, sigo desarrollando el motor paso a paso.</p>
-    <code>// Cálculo de fines de semana 2026<br>let findeSemana = 0;<br>for (let i = 1; i &lt;= 365; i++) {<br>  if (i % 7 === 3 || i % 7 === 4) findeSemana += 1;<br>}<br>console.log(findeSemana); // 104 ✅</code>
-    <ul>
-      <li>Rotación modular (mañana → tarde → noche → descanso)</li>
-      <li>Validación de descanso mínimo (16h entre turnos)</li>
-      <li>Soporte multicontrato (37.5h y 40h)</li>
-      <li>Dataset festivos Málaga 2026</li>
-      <li>Equidad y transparencia: el sistema no se olvida</li>
-    </ul>
-  </section>
-
-  <section class="main-section" id="Herramientas_y_método">
-    <header>Herramientas y método</header>
-    <p>Trabajo con VS Code, Git y GitHub. Despliego en GitHub Pages. Mi método es sencillo: una hora por la mañana antes del trabajo, cuando la cabeza está fresca. Ahí aprovecho para estudiar, escribir código o documentar en el diario. Los fines de semana, si el cuadrante lo permite, le meto más horas.</p>
-    <p>Cuando me enfrento a un bug, no me quedo atascado. Lo desgloso paso a paso: primero escribo qué quería que pasara, luego qué está pasando en realidad. Pruebo una cosa, luego otra. Documento cada intento. Al final, cuando encuentro el fix, anoto la lección. Así la próxima vez que me líe, tengo memoria.</p>
-    <p>Mi mayor miedo es que cuando llegue la oportunidad no esté preparado. Por eso no paro hasta que entiendo de verdad. Cada día, aunque avance poco, avanzo.</p>
-    <code>// Debug log real (MiniShop JS)<br>// Bug: this.name devolvía undefined<br>// Causa: parámetro del constructor con nombre distinto a la propiedad<br>// Fix: unificar el nombre del parámetro y la propiedad</code>
-    <ul>
-      <li>VS Code con Live Server</li>
-      <li>GitHub Pages para despliegue</li>
-      <li>freeCodeCamp para base teórica</li>
-      <li>Diario público para trazabilidad</li>
-      <li>Documentación de bugs con causa, síntoma y fix</li>
-    </ul>
-  </section>
-</main>
   <body>
-  
+
+    <!-- BARRA DE PROGRESO -->
+    <div id="progress-bar"></div>
+
+    <nav id="navbar">
+      <header>Jose Aparicio · Dev Log 365</header>
+      <a class="nav-link" href="#Filosofia_del_aprendizaje">Filosofía del aprendizaje</a>
+      <a class="nav-link" href="#Dev_Log_365">Dev Log 365</a>
+      <a class="nav-link" href="#Stack_tecnico_y_progreso">Stack técnico y progreso</a>
+      <a class="nav-link" href="#Proyectos_reales">Proyectos reales</a>
+      <a class="nav-link" href="#EquiShift_Malaga">EquiShift Málaga</a>
+      <a class="nav-link" href="#Herramientas_y_metodo">Herramientas y método</a>
+    </nav>
+
+    <main id="main-doc">
+
+      <section class="main-section" id="Filosofia_del_aprendizaje">
+        <header>Filosofía del aprendizaje</header>
+        <p>Empecé el 18 de enero de 2026, a los 39 años, sin bootcamp ni carrera de informática. Mi única certeza: la consistencia vale más que el talento. Estudio durante los tiempos muertos en recepción y código en casa. Mi lema: <em>"Logic is my superpower. Syntax is just the tool."</em></p>
+        <p>Para mí, aprender de verdad no es saber algo de memoria. Es entenderlo. Cuando algo no me queda claro, me lío. Y cuando me lío, lo desgloso paso a paso hasta que mi mente hace clic. Documento cada error, no solo el fix. Así construyo memoria real.</p>
+        <p>Mi símbolo es el Fénix: si me caigo, resurjo de mis cenizas. Por eso llevo un diario público: para que quede constancia de que esto está pasando de verdad, con días buenos y días en blanco.</p>
+        <code>// Mi mental model cuando algo no funciona
+if (algo_no_entiendo) {
+  desglosar_paso_a_paso();
+  documentar_error();
+  no_rendirse();
+}</code>
+        <ul>
+          <li>Consistencia sobre talento</li>
+          <li>Documentar cada error, no solo el fix</li>
+          <li>Entender antes de avanzar</li>
+          <li>Las personas primero: el código resuelve problemas reales</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Dev_Log_365">
+        <header>Dev Log 365</header>
+        <p>El Dev Log 365 es mi diario público de aprendizaje. Arrancó el 18 de enero de 2026 y llevo más de 70 sesiones documentadas. Cada entrada es un testigo de que estoy aquí todos los días, construyéndome. Sin filtros: errores incluidos, días malos incluidos, dudas incluidas.</p>
+        <p>Cada entrada tiene tres capas. La técnica: el error con causa, síntoma y fix. La empatía: quién hay detrás de lo que construyo. Y la vulnerabilidad honesta: cómo me sentí. <em>"Menuda guerra me está dando"</em>, <em>"me quedo en blanco"</em>, <em>"esto no ha podido conmigo"</em>.</p>
+        <p>El formato sigue STAR (Situación, Tarea, Acción, Resultado), debug log, victorias, código del día y next target. Así cada sesión deja una huella clara.</p>
+        <code>&lt;article class="entry"&gt;
+  &lt;h2&gt;DeskPedia: de cero a desplegado en una sola sesión&lt;/h2&gt;
+  &lt;p&gt;Tercer proyecto con fetch contra API real externa...&lt;/p&gt;
+&lt;/article&gt;</code>
+        <ul>
+          <li>STAR (Situación, Tarea, Acción, Resultado)</li>
+          <li>Debug Log con bugs y fixes documentados</li>
+          <li>Mental model del día</li>
+          <li>Next target: lo que sigue y lo que evito</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Stack_tecnico_y_progreso">
+        <header>Stack técnico y progreso</header>
+        <p>Mi stack base: HTML5, CSS3 y JavaScript. Niveles honestos a día 75: Flexbox 90%, Responsive Design 85%, DOM dinámico 70%, JavaScript 65%, async/await + fetch 65%, JSON 75%, OOP/Clases 60%. Prefiero decir la verdad siempre.</p>
+        <p>Certificaciones oficiales: Meta Programming with JavaScript (Coursera, marzo 2026), freeCodeCamp Responsive Web Design, freeCodeCamp JavaScript Algorithms. Actualmente en el Meta Front-End Developer Professional Certificate y con React en camino.</p>
+        <p>El siguiente paso es React — el TodoList será el primer proyecto portado al framework. Después, Tailwind CSS. El objetivo es llegar a junior frontend con proyectos reales desplegados y documentados.</p>
+        <code>// async/await — patrón consolidado en tres proyectos reales
+async function buscarWikipedia(termino) {
+  try {
+    const respuesta = await fetch(API_URL + termino);
+    const data = await respuesta.json();
+    mostrarResultados(data.query.search);
+  } catch (error) {
+    mostrarEstado("error");
+  }
+}</code>
+        <ul>
+          <li>HTML5 + CSS3: ✅ dominado</li>
+          <li>JavaScript ES6+: ██████░░░░ 65%</li>
+          <li>async/await + fetch: ██████░░░░ 65%</li>
+          <li>OOP / Clases: ██████░░░░ 60%</li>
+          <li>React: 🔜 en camino</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Proyectos_reales">
+        <header>Proyectos reales</header>
+        <p>Cada proyecto resuelve un problema concreto y tiene una historia detrás. No son ejercicios de tutorial — son decisiones documentadas, bugs reales, y deploys en producción.</p>
+        <p><strong>DeskPedia</strong> — guía de Málaga para recepcionistas de hotel basada en la API de Wikipedia. Búsqueda en tiempo real, 19 chips predefinidos, 4 estados de UI. Vanilla JS + fetch. Desplegado en GitHub Pages el mismo día que se construyó.</p>
+        <p><strong>Campus &amp; Crema</strong> — web de cafetería universitaria. Carousel OOP desde cero, validador de formulario con clase propia, API del clima en tiempo real. Primer proyecto con fetch contra API externa.</p>
+        <p><strong>MiniShop JS</strong> — carrito de compra con clases <code>Product</code> y <code>Cart</code>. Lógica de totales y eliminación con <code>reduce()</code> y <code>filter()</code>. 6 bugs documentados con causa, síntoma y fix.</p>
+        <code>// MiniShop JS — bug documentado
+// Bug: this.name devolvía undefined
+// Causa: parámetro del constructor con nombre distinto a la propiedad
+// Fix: unificar el nombre del parámetro y la propiedad
+class Product {
+  constructor(name, price) {
+    this.name = name;   // nombre unificado
+    this.price = price;
+  }
+}</code>
+        <ul>
+          <li>DeskPedia — Wikipedia API · GitHub Pages</li>
+          <li>Campus &amp; Crema — Weather API · OOP · FormValidator</li>
+          <li>MiniShop JS — OOP · reduce · filter</li>
+          <li>EquiShift — algoritmo de rotación de turnos real</li>
+          <li>We Playing Cards — CSS 3D Transforms · máquina de estados</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="EquiShift_Malaga">
+        <header>EquiShift Málaga</header>
+        <p>EquiShift no es un proyecto de portfolio. Es una deuda pendiente. Diego descansó el 70% de los fines de semana disponibles un año. Los otros 4, el 30% restante. Eso no es justo y se puede resolver con código.</p>
+        <p>El sistema resuelve la rotación de turnos para plantilla de hotel: 5 trabajadores, 3 turnos diarios (mañana, tarde, noche) más descanso, con mínimo 16 horas de descanso entre turnos. Soporta contratos mixtos (37.5h y 40h), valida los 104 fines de semana de 2026 y el dataset completo de festivos de Málaga. Arquitectura en tres fases: validación de vacaciones, validación de festivos, generación del calendario.</p>
+        <p>Cuando funcione con datos reales en el hotel, con Diego, Salvador, Miguel y Rafa, ese será el momento que hará que todo valga la pena.</p>
+        <code>// Validación de turno legal entre dos días consecutivos
+function esTurnoLegal(turnoAyer, turnoHoy) {
+  if (turnoAyer === "descanso") return true;
+  if (turnoAyer === "tarde" && turnoHoy === "mañana") return false;
+  if (turnoAyer === "noche" && turnoHoy !== "descanso") return false;
+  return true;
+}</code>
+        <ul>
+          <li>Rotación modular (mañana → tarde → noche → descanso)</li>
+          <li>Mínimo 16h de descanso entre turnos</li>
+          <li>Soporte multicontrato (37.5h y 40h)</li>
+          <li>Dataset festivos Málaga 2026</li>
+          <li>Arquitectura en tres fases con validación previa</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Herramientas_y_metodo">
+        <header>Herramientas y método</header>
+        <p>Trabajo con VS Code, Git y GitHub. Despliego en GitHub Pages. Estudio teoría durante los tiempos muertos en recepción y código en casa. Los fines de semana, si el cuadrante lo permite, le meto más horas.</p>
+        <p>Cuando me enfrento a un bug, no me quedo atascado. Lo desgloso paso a paso: primero escribo qué quería que pasara, luego qué está pasando en realidad. Pruebo una cosa, luego otra. Documento cada intento. Al final, cuando encuentro el fix, anoto la lección.</p>
+        <p>Mi mayor miedo es que cuando llegue la oportunidad no esté preparado. Por eso no paro hasta que entiendo de verdad. Cada día, aunque avance poco, avanzo.</p>
+        <code>// Debug log real (DeskPedia)
+// Bug: resultados invisibles en el DOM
+// Causa: contenedor con hidden nunca eliminado
+// Fix: llamar mostrarEstado("resultados") al inicio de mostrarResultados()
+listaResultados.innerHTML = "";
+mostrarEstado("resultados"); // esto faltaba</code>
+        <ul>
+          <li>VS Code + Live Server</li>
+          <li>Git + GitHub Pages para despliegue</li>
+          <li>Jonas Schmedtmann JS Course (Udemy)</li>
+          <li>Codewars niveles 8–7 para entrevistas</li>
+          <li>Documentación de bugs con causa, síntoma y fix</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
