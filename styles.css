@@ -1,9 +1,6 @@
 /* =========================================
    VARIABLES GLOBALES
-   =========================================
-   Los mismos colores y tipografías que uso en mi diario.
    Papel viejo, tinta suave, el azul que destaca.
-   Así este proyecto se siente como parte de lo mismo.
 ========================================= */
 :root {
   --paper: #faf7f2;
@@ -16,9 +13,8 @@
   --serif: "Libre Baskerville", serif;
   --display: "Playfair Display", serif;
   --sans: "DM Sans", sans-serif;
-
   --radius: 6px;
-  --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
   --speed: 0.25s;
 }
 
@@ -39,27 +35,37 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--display);
   font-weight: 700;
   line-height: 1.2;
 }
 
-p, li {
+p,
+li {
   font-family: var(--sans);
   font-size: 1rem;
 }
 
-code {
-  font-family: var(--mono);
-  background: var(--paper-d);
-  padding: 2px 4px;
-  border-radius: 4px;
+/* =========================================
+   BARRA DE PROGRESO DE LECTURA
+========================================= */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--accent);
+  z-index: 200;
+  transition: width 0.1s linear;
 }
 
 /* =========================================
    NAVBAR FIJA A LA IZQUIERDA
- ========================================= */
+========================================= */
 #navbar {
   position: fixed;
   top: 0;
@@ -90,15 +96,29 @@ code {
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--paper-d);
   font-family: var(--sans);
-  transition: color var(--speed), padding var(--speed);
+  transition: color var(--speed), padding var(--speed), border-left var(--speed);
+  border-left: 3px solid transparent;
+  padding-left: 0.5rem;
 }
 
 .nav-link:hover {
   color: var(--accent);
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
-/* El contenido principal se desplaza para dejar sitio a la navbar */
+/* Nav link activo */
+.nav-link.active {
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  font-weight: 500;
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
 #main-doc {
   margin-left: 280px;
   padding: 2rem 3rem;
@@ -107,7 +127,7 @@ code {
 
 /* =========================================
    SECCIONES
- ========================================= */
+========================================= */
 .main-section {
   margin-bottom: 3rem;
   scroll-margin-top: 1rem;
@@ -127,31 +147,32 @@ code {
   margin-bottom: 1rem;
 }
 
-/* Código: fondo oscuro para que resalte, como en mi diario */
-pre, code:not(:is(pre code)) {
+/* Bloques de código */
+code {
+  font-family: var(--mono);
   background: #1a1a1a;
   color: #f5f5f5;
   padding: 1rem;
   border-radius: var(--radius);
-  font-family: var(--mono);
   margin: 1rem 0;
   white-space: pre-wrap;
   overflow-x: auto;
   display: block;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  color: inherit;
-}
-
-:not(pre) > code {
+/* Código inline dentro de párrafos */
+p code,
+li code {
   background: var(--paper-d);
   color: var(--ink);
-  padding: 2px 4px;
+  padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.85rem;
+  display: inline;
+  margin: 0;
+  white-space: normal;
 }
 
 ul {
@@ -164,7 +185,7 @@ li {
 
 /* =========================================
    RESPONSIVE
-  ========================================= */
+========================================= */
 @media (max-width: 768px) {
   #navbar {
     position: static;
@@ -184,5 +205,15 @@ li {
     display: inline-block;
     margin-right: 1rem;
     border-bottom: none;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .nav-link.active {
+    border-left: none;
+    border-bottom: 2px solid var(--accent);
+    padding-left: 0;
+    background: none;
+    border-radius: 0;
   }
 }
